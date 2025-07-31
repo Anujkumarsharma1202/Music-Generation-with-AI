@@ -1,0 +1,67 @@
+Install Required Libraries
+Open your terminal (or VS Code terminal) and run:
+
+bash
+Copy
+Edit
+pip install music21 tensorflow keras numpy
+📁 2. Prepare Folder Structure
+Create the following folders in your project directory (if not already created):
+
+css
+Copy
+Edit
+project/
+├── midi_songs/        → Put your .mid files here (e.g., classical music)
+├── data/              → Will be created automatically
+├── model/             → Trained model will be saved here
+├── output/            → Generated MIDI will be saved here
+└── music_generator.py → Main Python file
+🎵 3. Add MIDI Files
+Put at least 1 valid .mid file into the midi_songs/ folder.
+Example source: https://bitmidi.com
+
+You can also download one with:
+
+bash
+Copy
+Edit
+curl -o midi_songs/fur_elise.mid https://bitmidi.com/uploads/73533.mid
+▶️ 4. Run the Code
+In the terminal, execute:
+
+bash
+Copy
+Edit
+python music_generator.py
+If everything is set up correctly:
+
+The model will extract notes
+
+Train for several epochs
+
+Generate new music
+
+🎶 5. Check the Output
+After training completes, check:
+
+bash
+Copy
+Edit
+output/generated_music.mid
+You can open this file using:
+
+MuseScore (recommended)
+
+VLC (after setting up SoundFont)
+
+GarageBand (Mac)
+
+Online MIDI player: https://onlinesequencer.net/
+
+💡 Tips
+If you see ❌ Not enough notes found, make sure your .mid files are valid and contain music notes.
+
+Training may take 1–5 minutes depending on your dataset and system.
+
+Start with small .mid files to keep training fast.
